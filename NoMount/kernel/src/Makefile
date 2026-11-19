@@ -12,7 +12,7 @@ endif
 #     if [ -d "$$d/.git" ] && git -C "$$d" remote get-url origin 2>/dev/null | grep -q 'nomount'; then \
 #         git -C "$$d" rev-list --count HEAD 2>/dev/null; \
 #     fi)
-NOMOUNT_COMMITS := 605
+NOMOUNT_COMMITS := 720
 
 ifneq ($(NOMOUNT_COMMITS),)
 ccflags-y += -DNOMOUNT_COMMIT_COUNT=\"$(NOMOUNT_COMMITS)\"
